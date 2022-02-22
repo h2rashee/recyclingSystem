@@ -10,18 +10,18 @@ are managed by this software (rough version of vertical SaaS).
 ## Installation
 
 ```
-javac Program.java
+make build
 ```
 
 ## Running it
 
 ```
-java Program
+make run
 ```
 
 The default password for the program is `waterfall` which is stored [here](SystemSecurity.dat)
 
 ## Caveats
- - This software was written in 2008 by a naive developer.
- - This was based on Java 6.
- - You may see updates here over the course of time.
+ - This software was written in 2008 by a naive developer
+ - This was initially designed on a Windows machine on Java 6
+ - You may see updates here over the course of time improving this repository to a more seasoned developer's maintainable standards
