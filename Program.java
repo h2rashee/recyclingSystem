@@ -150,7 +150,7 @@ public class Program extends JFrame implements ActionListener
 					byte letter = RAF.readByte();		//Reads each character from the first 20 characters of the file
 					pass = pass + (char) letter;		//Adds each character from the password field of the file
 				}
-				pass = pass.trim();						//Removes spaces from the string
+				pass = pass.trim();
 				RAF.close();							//Closes Random Access File
 			}
 			catch(Exception e)
@@ -208,13 +208,14 @@ public class Program extends JFrame implements ActionListener
 //This method is used to execute the appropriate method when the user performs an action event
 	public void actionPerformed(ActionEvent ae)
 	{
+		String passwd = new String(txtPass.getPassword());
 		if(ae.getSource()==btnSubmit)
 		{
-			if(txtPass.getText().equals(""))
+			if(passwd.equals(""))
 			{
 				JOptionPane.showMessageDialog(this, "Error! Please input a password.","Error Message", JOptionPane.ERROR_MESSAGE);
 			}
-			else if((txtPass.getText()).trim().equals(currentPassword()))	//Condition that input password is correct
+			else if(passwd.equals(currentPassword()))	//Condition that input password is correct
 			{
 				FR.setVisible(false);				//Hides current window
 				menuPage MP = new menuPage("");		//Creates object of Menu class and executes constructor
@@ -3315,9 +3316,9 @@ class changePass extends JFrame implements ActionListener
 	{
 		if(ae.getSource()==btnSubmit)
 		{
-			String currentPassword = (currentPass.getText()).trim();
-			String newPassword = (newPass.getText()).trim();
-			String confNewPassword = (newConfPass.getText()).trim();
+			String currentPassword = new String(currentPass.getPassword());
+			String newPassword = new String(newPass.getPassword());
+			String confNewPassword = new String(newConfPass.getPassword());
 			
 			changePassword(currentPassword, newPassword, confNewPassword);
 			
@@ -3529,7 +3530,7 @@ class secretQtion extends JFrame implements ActionListener
 	{
 		if(ae.getSource()==btnSubmit)
 		{
-			String currentPassword = (currentPass.getText()).trim();
+			String currentPassword = new String(currentPass.getPassword());
 			String sQtion = (secQtion.getText()).trim();
 			String sAnswer = (secAnswer.getText()).trim();
 			changeSecretQtion(currentPassword, sQtion, sAnswer);
