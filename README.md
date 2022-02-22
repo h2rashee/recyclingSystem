@@ -9,11 +9,15 @@ are managed by this software (rough version of vertical SaaS).
 
 ## Installation
 
-`javac Program.java`
+```
+javac Program.java
+```
 
 ## Running it
 
-`java Program`
+```
+java Program
+```
 
 The default password for the program is `waterfall` which is stored [here](SystemSecurity.dat)
 
