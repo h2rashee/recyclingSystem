@@ -22,6 +22,6 @@ make run
 The default password for the program is `waterfall` which is stored [here](SystemSecurity.dat)
 
 ## Caveats
- - This software was written in 2008 by a naive developer
+ - This software was written in 2008 by a naive developer (READ: high school student)
  - This was initially designed on a Windows machine on Java 6
  - You may see updates here over the course of time improving this repository to a more seasoned developer's maintainable standards
